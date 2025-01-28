@@ -1,13 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Inter";
+  font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.on-render-animation {
+  animation: OnRenderAnimation 0.5s linear;
+  transform-origin: center; /* Ensure the animation starts from the center */
+}
+
+.on-exit-animation {
+  animation: OnExitAnimation 0.4s ease-in-out;
+  transform-origin: center; /* Exit scaling from the center */
+}
+
+@keyframes OnRenderAnimation {
+  0% {
+    opacity: 0;
+    scale: 0; /* Scale from 0 to 1 */
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes OnExitAnimation {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  50% {
+    opacity: 0.5;
+    scale: 0.5;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+.line-animation {
+  animation: identifier 2s linear infinite;
+}
+
+@keyframes identifier {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  25% {
+    opacity: 1;
+    transform: scaleX(0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+  65% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+.render-button {
+  animation: renderButton 0.4s linear 1.5s forwards;
+  transform-origin: top;
+}
+@keyframes renderButton {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.expend-mode {
+  animation: gotoExpendMode 0.4s linear forwards;
+}
+@keyframes gotoExpendMode {
+  0% {
+    width: 355px;
+    height: 240px;
+  }
+  100% {
+    width: 722px;
+    height: 446px;
+  }
+}
+.go-to-normal-mode {
+  animation: gotoNormalMode 0.4s linear forwards;
+}
+@keyframes gotoNormalMode {
+  0% {
+    width: 722px;
+    height: 446px;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    transform: scale(0);
+  }
+}
+.custom-bg {
+  background-image: url("https://i.ytimg.com/vi/Ar0pRFZoF6Y/mqdefault.jpg");
+  background-position-y: 0px;
+}
+.remove-border-radius {
+  animation: removeBottomBorderRadius 0.3s linear 1.5s forwards;
+}
+@keyframes removeBottomBorderRadius {
+  0% {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  100% {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }

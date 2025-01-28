@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Mi Hover Element
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**HoverPlayer** is a React component that provides an interactive video player experience, allowing users to expand and collapse a video player seamlessly. It includes buttons for additional actions and customizable elements, making it perfect for enhancing your web applications.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Example](#example)
+- [Let us know!](#Letusknow)
+- [License](#license)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can install `HoverPlayer` via npm:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install hover-player
+```
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To use the HoverPlayer component, follow these steps:
 
-### `npm run build`
+1.Import the HoverPlayer component in your React file:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+import HoverPlayer from  'hover-player';
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.Use the HoverPlayer component in your React application. Here’s how to do it:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+function App() {
+return (
+  <HoverPlayer
+    title="Video Title"
+    thumbnail="thumbnail_url_here"
+    youtubeVideoUrl="youtube_video_url_here"
+    leftSideBtnUrl="left_button_url_here"
+    leftSideBtnText="Left Button"
+    rightSideBtnUrl="right_button_url_here"
+    rightSideBtnText="Right Button"
+  />
+);
+}
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Props
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **`title`** (string): The title of the video to display.
+- **`thumbnail`** (string): The URL of the video's thumbnail image.
+- **`youtubeVideoUrl`** (string): The URL of the YouTube video to play.
+- **`leftSideBtnUrl`** (string): The URL for the left side button.
+- **`leftSideBtnText`** (string): The text to display on the left side button.
+- **`rightSideBtnUrl`** (string): The URL for the right side button.
+- **`rightSideBtnText`** (string): The text to display on the right side button.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Example
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+import React from 'react';
+import ReactDOM from 'react-dom';
+import HoverPlayer from 'hover-player';
 
-## Learn More
+function App() {
+  return (
+    <HoverPlayer
+      title="My Video"
+      thumbnail="https://example.com/thumbnail.jpg"
+      youtubeVideoUrl="https://www.youtube.com/watch?v=example"
+      leftSideBtnUrl="https://example.com/left"
+      leftSideBtnText="Left Action"
+      rightSideBtnUrl="https://example.com/right"
+      rightSideBtnText="Right Action"
+    />
+  );
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ReactDOM.render(<App />, document.getElementById('root'));
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+## Let us know!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you use my open-source libraries in your project, please make sure to credit me and Give a star to [varunpatel.vercel.app](https://varunpatel.vercel.app/)
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
