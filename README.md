@@ -6,10 +6,10 @@ Demo
 
 Check out a live demo of HoverPlayer in action:
 
-[Watch the Demo](https://youtu.be/8Qp6VnwkCn0)
+[Watch the Demo](./public/16c1c1f3-1633-4376-b32f-4a228f610ec0.mp4)
 
 <video width="600" controls autoplay muted loop>
-  <source src="https://youtu.be/8Qp6VnwkCn0" type="video/mp4">
+  <source src="./public/16c1c1f3-1633-4376-b32f-4a228f610ec0.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
