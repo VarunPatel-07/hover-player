@@ -2,7 +2,7 @@
 
 **HoverPlayer** is a React component that provides an interactive video player experience, allowing users to expand and collapse a video player seamlessly. It includes buttons for additional actions and customizable elements, making it perfect for enhancing your web applications.
 
-Demo
+## Demo
 
 Check out a live demo of HoverPlayer in action:
 
